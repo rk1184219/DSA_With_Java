@@ -589,6 +589,7 @@ public class main{
         } else {
             if (!inputUsername.equals(preDefinedUsername)) {
                 System.out.println("Login Failed! Invalid username!");
+                 System.out.println("Please Enter Your Valid credentials!");
             }
             if (!inputPassword.equals(preDefinedPassword)) {
                 System.out.println("Login Failed! Invalid password!");
