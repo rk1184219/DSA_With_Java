@@ -515,4 +515,48 @@ import java.util.Scanner;
 // }
 
 
+//write the code for Develop a program to simulate a basic login system with a predefined username and preDefined password.
+
+import java.util.Scanner;
+public class main{
+    public static void main(String[] args){
+
+        // This is predefined the  username and password;
+        String preDefinedUsername = "Rahul kumar";
+        String preDefinedPassword = "Rahul@12345";
+
+        //Create the username and password;
+        Scanner scanner = new Scanner(System.in);
+
+        //This for take the input from the users;
+        System.out.println("Welcome To The Login Profile!");
+
+        //this for the Get username input
+
+        System.out.println("Enter Your UserName:");
+        String inputUsername = scanner.nextLine();
+
+        //this for the Get username input
+
+        System.out.println("Enter Your UserName:");
+        String inputPassword = scanner.nextLine();
+
+        // Check if the input matches the predefined credentials then print if coindition statement  otherwise print else condition statements;
+
+        if(inputUsername.equals(preDefinedUsername) && inputPassword.equals(preDefinedPassword)){
+
+            System.out.println("Login Profile SuccessFukklly! Acees your Profile"  + inputUsername + "!");
+        }
+
+        else{
+            System.out.println("Login failed! Invalid username or password");
+        }
+        System.out.println("Please Enter Your valid username and password:");
+        scanner.close();
+
+    }
+}
+
+
+
 
