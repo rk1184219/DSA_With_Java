@@ -35,6 +35,47 @@ public class arrays {
             System.out.println("Element at indexes" +i+ ":" +arr[i]);
         }
 
+
+
+//write the code for given an array A of positive integers task is to find the leader in the array is to be leader if it greater than or euals to all elemnts of the right side then the right most elements is always cosidered as leaders;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class LeaderInArray {
+    public static void main(String[] args) {
+
+        int[] arr = {16, 17, 4, 3, 5, 2};
+        List<Integer> leaders = findLeader(arr);
+
+        System.out.println("Leaders in the Array: " + leaders);
+    }
+
+    // Method to find leaders in the array
+    public static List<Integer> findLeader(int[] arr) {
+        List<Integer> leaders = new ArrayList<>();
+
+        int n = arr.length;
+
+        // Identify the rightmost leader element
+        int maxFromRightMost = arr[n - 1];
+        leaders.add(maxFromRightMost);
+
+        // Traverse the array from the backward
+        for (int i = n - 2; i >= 0; i--) {
+            if (arr[i] >= maxFromRightMost) {
+                maxFromRightMost = arr[i];
+                leaders.add(maxFromRightMost);
+            }
+        }
+
+        // Reverse the list to maintain the order of leaders in the array
+        Collections.reverse(leaders);
+        return leaders;
+    }
+}
+
         System.out.println("We have successfully find the elments:");
     }
 
