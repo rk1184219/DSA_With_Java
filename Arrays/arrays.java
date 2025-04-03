@@ -80,3 +80,52 @@ public class LeaderInArray {
     }
 
 }
+
+
+
+// //Write a Java program to declare, initialize, and print the elements of an arrays;
+
+// public class LeaderInArray{
+//     public static void main(String[] args){
+//         //decleared and initalized the array of the elements;
+//         int[] numbers = {10,20,30,40,50};
+
+//         System.out.println("Elemenst of an array: ");
+
+//         //traverse the Elements of an array;
+//         for(int i=0; i<numbers.length; i++){
+//                 System.out.println(numbers[i]);
+//         }
+//     }
+// }
+
+
+//Write a Java program to declare, initialize, and print the elements of an arrays and array value taken from the users;
+import java.util.Scanner;
+
+public class LeaderInArray {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Get the size of the array from the user
+        System.out.println("Enter the number of elements in the array:");
+        int size = scanner.nextInt();
+
+        // Declare and initialize the array
+        int[] numbers = new int[size];
+
+        // Input array elements from the user
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = scanner.nextInt();
+        }
+
+        // Traverse and print the elements of the array
+        System.out.println("Elements of the array:");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+
+        scanner.close(); // Close the scanner to prevent resource leak
+    }
+}
